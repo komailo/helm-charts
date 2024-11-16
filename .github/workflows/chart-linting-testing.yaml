@@ -1,0 +1,73 @@
+name: Linting and Testing
+on: pull_request
+
+permissions:
+  contents: read
+
+jobs:
+  ## Reference: https://artifacthub.io/docs/topics/cli/
+  artifacthub-lint:
+    runs-on: ubuntu-20.04
+    container:
+      image: artifacthub/ah
+      options: --user root
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@master
+      - name: Run ah lint
+        working-directory: ./charts
+        run: ah lint
+
+  ## Reference: https://github.com/helm/chart-testing-action
+  helm-chart-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Helm
+        uses: azure/setup-helm@v4.2.0
+        with:
+          version: v3.16.2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+          check-latest: true
+
+      - name: Set up chart-testing
+        uses: helm/chart-testing-action@v2.6.1
+
+      - name: Run chart-testing (list-changed) for lint
+        id: lint-list-changed
+        run: |
+          changed=$(ct list-changed --config ./.github/configs/ct-lint.yaml)
+          if [[ -n "$changed" ]]; then
+            echo "lint-changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run chart-testing (list-changed) for install
+        id: install-list-changed
+        run: |
+          changed=$(ct list-changed --config ./.github/configs/ct-install.yaml)
+          if [[ -n "$changed" ]]; then
+            echo "install-changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run chart-testing (lint)
+        if: steps.lint-list-changed.outputs.changed == 'true'
+        run: ct lint --config ./.github/configs/ct-lint.yaml
+
+      - name: Create kind cluster
+        if: steps.install-list-changed.outputs.changed == 'true'
+        uses: helm/kind-action@v1.10.0
+
+      - name: Run chart-testing (install)
+        if: steps.install-list-changed.outputs.changed == 'true'
+        run: |
+          # we remove the dependencies to avoid conflict with the previous lint step building the dependencies
+          rm -rf charts/*/charts
+          rm -rf charts/*/Chart.lock
+          ct install --config ./.github/configs/ct-install.yaml
