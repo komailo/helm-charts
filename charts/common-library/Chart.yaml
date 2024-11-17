@@ -3,3 +3,8 @@ name: common-library
 description: A Helm library chart
 type: library
 version: 0.3.0
+maintainers:
+  - name: komailo
+    url: https://github.com/komailo/helm-charts
+sources:
+  - https://github.com/komailo/helm-charts
