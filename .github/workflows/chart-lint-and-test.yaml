@@ -1,4 +1,4 @@
-name: Linting and Testing
+name: Chart Lint and Test
 on: pull_request
 
 permissions:
