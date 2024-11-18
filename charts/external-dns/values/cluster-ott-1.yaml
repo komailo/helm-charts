@@ -1,0 +1,9 @@
+esm:
+  SimpleSecrets:
+    - name: digital-ocean-domain-token
+      dataSecretKey: token
+      remoteRefKey: /k8s-ott-1/external-dns/digital-ocean-token
+
+external-dns:
+  domainFilters:
+    value: "'{<path:argocd:k8s-ott-1.external-dns.domain#domain>}'"

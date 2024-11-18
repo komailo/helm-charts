@@ -1,0 +1,24 @@
+apiVersion: v2
+name: external-dns
+description: A Helm chart for External DNS
+type: application
+
+version: 0.1.0
+
+maintainers:
+  - name: komailo
+    url: https://github.com/komailo/helm-charts
+sources:
+  - https://github.com/komailo/helm-charts
+
+dependencies:
+  - name: external-dns
+    version: "1.14.5"
+    repository: https://kubernetes-sigs.github.io/external-dns/
+    alias: external-dns
+    condition: external-dns.enabled
+  - name: external-secrets-manager
+    version: "0.2.0"
+    repository: https://komailo.github.io/helm-charts
+    condition: external-secrets-manager.enabled
+    alias: esm

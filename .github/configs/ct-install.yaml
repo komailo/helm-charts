@@ -6,5 +6,6 @@ exclude-deprecated: true
 excluded-charts:
   - cloudflare-tunnel-remote
   - common-library
+  - external-dns
 github-groups: true
 target-branch: main
