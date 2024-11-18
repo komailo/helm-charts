@@ -1,7 +1,7 @@
 apiVersion: v2
 name: cloudflare-tunnel-remote
 description: A Helm chart with cloudflare-tunnel-remote as subchart
-version: 0.1.0
+version: 0.1.1
 maintainers:
   - name: komailo
     url: https://github.com/komailo/helm-charts
@@ -9,7 +9,7 @@ sources:
   - https://github.com/komailo/helm-charts
 dependencies:
   - name: cloudflare-tunnel-remote
-    version: ">=0.1.2"
+    version: "0.1.2"
     repository: https://cloudflare.github.io/helm-charts
     alias: cloudflare-tunnel-remote
     condition: cloudflare-tunnel-remote.enabled
