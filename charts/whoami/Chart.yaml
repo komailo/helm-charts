@@ -1,0 +1,11 @@
+apiVersion: v2
+name: whoami
+description: A Helm Chart for whoami
+type: application
+version: 0.1.0
+appVersion: "1.10.2"
+maintainers:
+  - name: komailo
+    url: https://github.com/komailo/helm-charts
+sources:
+  - https://github.com/komailo/helm-charts

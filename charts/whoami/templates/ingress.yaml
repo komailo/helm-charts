@@ -1,0 +1,50 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: whoami-http
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    external-dns.alpha.kubernetes.io/hostname: "whoami.{{ .Values.externalDnsDomain }}"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - "whoami.{{ .Values.externalDnsDomain }}"
+      secretName: whoami-secret
+  rules:
+    - host: "whoami.{{ .Values.externalDnsDomain }}"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: whoami-svc
+                port:
+                  number: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: whoami-preview-http
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    external-dns.alpha.kubernetes.io/hostname: "whoami-preview.{{ .Values.externalDnsDomain }}"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - "whoami-preview.{{ .Values.externalDnsDomain }}"
+      secretName: whoami-preview-secret
+  rules:
+    - host: "whoami-preview.{{ .Values.externalDnsDomain }}"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: whoami-preview-svc
+                port:
+                  number: 80
