@@ -1,4 +1,4 @@
 externalDnsDomain: ""
 image:
   repository: "traefik/whoami"
-  tag: "v1.10.2"
+  tag: "v1.10.3"
