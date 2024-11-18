@@ -10,5 +10,5 @@ sources:
   - https://github.com/komailo/helm-charts
 dependencies:
   - name: common-library
-    version: "0.3.0"
+    version: "0.3.1"
     repository: "https://komailo.github.io/helm-charts"
