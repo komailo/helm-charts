@@ -17,6 +17,6 @@ spec:
           command:
             - "curl"
             - --fail-with-body
-            - "https://"whoami.{{ .Values.externalDnsDomain }}"
+            - "https://whoami.{{ .Values.externalDnsDomain }}"
       restartPolicy: Never
   backoffLimit: 2
