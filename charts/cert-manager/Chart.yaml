@@ -3,8 +3,11 @@ name: cert-manager
 description: A Helm chart with cert-manager as subchart
 type: application
 version: 0.1.0
-appVersion: "0.1.0"
-
+maintainers:
+  - name: komailo
+    url: https://github.com/komailo/helm-charts
+sources:
+  - https://github.com/komailo/helm-charts
 dependencies:
   - name: cert-manager
     version: v1.15.3
@@ -12,7 +15,7 @@ dependencies:
     alias: cert-manager
     condition: cert-manager.enabled
   - name: external-secrets-manager
-    version: ">=0.1.0"
+    version: "0.3.1"
     repository: https://komailo.github.io/helm-charts
     condition: external-secrets-manager.enabled
     alias: esm
