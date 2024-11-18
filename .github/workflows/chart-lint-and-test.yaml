@@ -45,7 +45,7 @@ jobs:
         run: |
           changed=$(ct list-changed --config ./.github/configs/ct-lint.yaml)
           if [[ -n "$changed" ]]; then
-            echo "lint-changed=true" >> "$GITHUB_OUTPUT"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Run chart-testing (list-changed) for install
@@ -53,7 +53,7 @@ jobs:
         run: |
           changed=$(ct list-changed --config ./.github/configs/ct-install.yaml)
           if [[ -n "$changed" ]]; then
-            echo "install-changed=true" >> "$GITHUB_OUTPUT"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Run chart-testing (lint)

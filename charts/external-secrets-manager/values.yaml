@@ -1,0 +1,4 @@
+globals:
+  secretStoreRefKind: ClusterSecretStore
+  secretStoreRefName: aws-ssm-parameter-store-default
+  refreshInterval: 24h

@@ -1,0 +1,14 @@
+apiVersion: v2
+name: external-secrets-manager
+description: A Helm chart to create external secret objects
+type: application
+version: 0.2.0
+maintainers:
+  - name: komailo
+    url: https://github.com/komailo/helm-charts
+sources:
+  - https://github.com/komailo/helm-charts
+dependencies:
+  - name: common-library
+    version: "0.3.0"
+    repository: "https://komailo.github.io/helm-charts"

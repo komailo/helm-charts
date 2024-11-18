@@ -5,5 +5,6 @@ chart-repos: []
 exclude-deprecated: true
 excluded-charts:
   - cloudflare-tunnel-remote
+  - common-library
 github-groups: true
 target-branch: main
