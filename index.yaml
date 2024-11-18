@@ -44,6 +44,32 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/common-library-0.3.0/common-library-0.3.0.tgz
     version: 0.3.0
+  external-dns:
+  - apiVersion: v2
+    created: "2024-11-18T02:38:29.664533372Z"
+    dependencies:
+    - alias: external-dns
+      condition: external-dns.enabled
+      name: external-dns
+      repository: https://kubernetes-sigs.github.io/external-dns/
+      version: 1.14.5
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 0.2.0
+    description: A Helm chart for External DNS
+    digest: 97e6dd6262bd3f6f4e656e068506231de1dce02b162b6035f540cc846ea7146d
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: external-dns
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/external-dns-0.1.0/external-dns-0.1.0.tgz
+    version: 0.1.0
   external-secrets-manager:
   - apiVersion: v2
     created: "2024-11-18T02:33:27.469295789Z"
@@ -81,4 +107,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/external-secrets-manager-0.2.0/external-secrets-manager-0.2.0.tgz
     version: 0.2.0
-generated: "2024-11-18T02:33:27.469305377Z"
+generated: "2024-11-18T02:38:29.664549522Z"
