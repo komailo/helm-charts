@@ -4,6 +4,7 @@
 chart-repos: []
 exclude-deprecated: true
 excluded-charts:
+  - cert-manager
   - cloudflare-tunnel-remote
   - common-library
   - external-dns
