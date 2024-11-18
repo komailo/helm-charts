@@ -22,6 +22,20 @@ entries:
     version: 0.1.0
   common-library:
   - apiVersion: v2
+    created: "2024-11-18T01:31:44.628366175Z"
+    description: A Helm library chart
+    digest: fb59f5ca8f5eb2a556cc3c278943ec77f397a2a37ccce92efae3206b25c4f247
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: common-library
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: library
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/common-library-0.3.1/common-library-0.3.1.tgz
+    version: 0.3.1
+  - apiVersion: v2
     created: "2024-11-17T22:38:04.685252557Z"
     description: A Helm library chart
     digest: 7ed957dbc3d80da5df7db408aeaba96643241ed7bb6b67aa65cd6dce00d970b6
@@ -30,4 +44,23 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/common-library-0.3.0/common-library-0.3.0.tgz
     version: 0.3.0
-generated: "2024-11-17T22:38:04.685262215Z"
+  external-secrets-manager:
+  - apiVersion: v2
+    created: "2024-11-18T01:31:44.75834094Z"
+    dependencies:
+    - name: common-library
+      repository: https://komailo.github.io/helm-charts
+      version: 0.3.0
+    description: A Helm chart to create external secret objects
+    digest: eb6dc3b21061831651f8cb7608093fb9c97555428afc4b92cfe2b5869cf6e82e
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: external-secrets-manager
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/external-secrets-manager-0.2.0/external-secrets-manager-0.2.0.tgz
+    version: 0.2.0
+generated: "2024-11-18T01:31:44.758357911Z"
