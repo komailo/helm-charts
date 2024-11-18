@@ -1,0 +1,15 @@
+external-dns:
+  policy: sync
+  sources:
+    - service
+    - ingress
+
+  provider:
+    name: digitalocean
+
+  env:
+    - name: DO_TOKEN
+      valueFrom:
+        secretKeyRef:
+          name: digital-ocean-domain-token
+          key: token
