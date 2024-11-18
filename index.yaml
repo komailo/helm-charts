@@ -1,6 +1,51 @@
 apiVersion: v1
 entries:
+  cert-manager:
+  - apiVersion: v2
+    created: "2024-11-18T03:14:05.698308949Z"
+    dependencies:
+    - alias: cert-manager
+      condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.15.3
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 0.2.1
+    description: A Helm chart with cert-manager as subchart
+    digest: 7a518d81a72bed320b2d003cf6c211471b411702890a2f7e69940151a88c2954
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: cert-manager
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/cert-manager-0.1.0/cert-manager-0.1.0.tgz
+    version: 0.1.0
   cloudflare-tunnel-remote:
+  - apiVersion: v2
+    created: "2024-11-18T03:14:05.786731048Z"
+    dependencies:
+    - alias: cloudflare-tunnel-remote
+      condition: cloudflare-tunnel-remote.enabled
+      name: cloudflare-tunnel-remote
+      repository: https://cloudflare.github.io/helm-charts
+      version: 0.1.2
+    description: A Helm chart with cloudflare-tunnel-remote as subchart
+    digest: 3f9fc4389304c0748e333761e09075e70f2f178ea4e2f9b9f3cf5ad280f83c6e
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: cloudflare-tunnel-remote
+    sources:
+    - https://github.com/komailo/helm-charts
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/cloudflare-tunnel-remote-0.1.1/cloudflare-tunnel-remote-0.1.1.tgz
+    version: 0.1.1
   - apiVersion: v2
     created: "2024-11-17T04:31:38.52049645Z"
     dependencies:
@@ -157,4 +202,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/external-secrets-manager-0.2.0/external-secrets-manager-0.2.0.tgz
     version: 0.2.0
-generated: "2024-11-18T03:09:20.258137237Z"
+generated: "2024-11-18T03:14:05.786749693Z"
