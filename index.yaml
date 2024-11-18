@@ -227,4 +227,20 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/external-secrets-manager-0.2.0/external-secrets-manager-0.2.0.tgz
     version: 0.2.0
-generated: "2024-11-18T03:22:39.203664172Z"
+  whoami:
+  - apiVersion: v2
+    appVersion: 1.10.2
+    created: "2024-11-18T04:12:17.123547308Z"
+    description: A Helm Chart for whoami
+    digest: cb58db9d786e4b8795b1d0c2ac264e16217394fa2da336d277be0b8c80e1efc0
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: whoami
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-11-18T04:12:17.123572725Z"
