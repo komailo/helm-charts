@@ -2,49 +2,49 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: whoami-http
+  name: "whoami-{{ .Release.Name }}-http"
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
-    external-dns.alpha.kubernetes.io/hostname: "whoami.{{ .Values.externalDnsDomain }}"
+    external-dns.alpha.kubernetes.io/hostname: "whoami-{{ .Release.Name }}.{{ .Values.externalDnsDomain }}"
 spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - "whoami.{{ .Values.externalDnsDomain }}"
-      secretName: whoami-secret
+        - "whoami-{{ .Release.Name }}.{{ .Values.externalDnsDomain }}"
+      secretName: whoami-{{ .Release.Name }}-secret
   rules:
-    - host: "whoami.{{ .Values.externalDnsDomain }}"
+    - host: "whoami-{{ .Release.Name }}.{{ .Values.externalDnsDomain }}"
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: whoami-svc
+                name: whoami-{{ .Release.Name }}-svc
                 port:
                   number: 80
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: whoami-preview-http
+  name: whoami-{{ .Release.Name }}-preview-http
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
-    external-dns.alpha.kubernetes.io/hostname: "whoami-preview.{{ .Values.externalDnsDomain }}"
+    external-dns.alpha.kubernetes.io/hostname: "whoami-{{ .Release.Name }}-preview.{{ .Values.externalDnsDomain }}"
 spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - "whoami-preview.{{ .Values.externalDnsDomain }}"
-      secretName: whoami-preview-secret
+        - "whoami-{{ .Release.Name }}-preview.{{ .Values.externalDnsDomain }}"
+      secretName: whoami-{{ .Release.Name }}-preview-secret
   rules:
-    - host: "whoami-preview.{{ .Values.externalDnsDomain }}"
+    - host: "whoami-{{ .Release.Name }}-preview.{{ .Values.externalDnsDomain }}"
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: whoami-preview-svc
+                name: whoami-{{ .Release.Name }}-preview-svc
                 port:
                   number: 80

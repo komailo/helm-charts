@@ -2,11 +2,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: whoami-svc
+  name: whoami-{{ .Release.Name }}-svc
 spec:
   type: ClusterIP
   selector:
-    app: whoami
+    app: whoami-{{ .Release.Name }}
   ports:
     - port: 80
 
@@ -14,10 +14,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: whoami-preview-svc
+  name: whoami-{{ .Release.Name }}-preview-svc
 spec:
   type: ClusterIP
   selector:
-    app: whoami
+    app: whoami-{{ .Release.Name }}
   ports:
     - port: 80
