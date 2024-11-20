@@ -2,14 +2,14 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: test-external-endpoint
+  name: whoami-{{ .Release.Name }}-test-external-endpoint
   annotations:
     argocd.argoproj.io/hook: PostSync
     argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
 spec:
   template:
     metadata:
-      name: template-name
+      name: whoami-{{ .Release.Name }}-test-external-endpoint
     spec:
       containers:
         - name: container-name
@@ -17,6 +17,6 @@ spec:
           command:
             - "curl"
             - --fail-with-body
-            - "https://whoami.{{ .Values.externalDnsDomain }}"
+            - "https://whoami-{{ .Release.Name }}.{{ .Values.externalDnsDomain }}"
       restartPolicy: Never
   backoffLimit: 2
