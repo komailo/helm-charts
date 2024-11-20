@@ -6,4 +6,4 @@ esm:
 
 external-dns:
   domainFilters:
-    value: "'{<path:argocd:k8s-ott-1.external-dns.domain#domain>}'"
+    - <path:argocd:k8s-ott-1.external-dns.domain#domain>
