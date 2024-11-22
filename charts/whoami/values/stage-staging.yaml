@@ -1,0 +1,5 @@
+externalDnsDomain: ""
+instanceName: "whoami"
+image:
+  repository: "traefik/whoami"
+  tag: ghcr.io/traefik/whoami@sha256:43a68d10b9dfcfc3ffbfe4dd42100dc9aeaf29b3a5636c856337a5940f1b4f1c
