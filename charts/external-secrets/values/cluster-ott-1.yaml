@@ -2,3 +2,4 @@
 argocdAvpAwsIamSecretName: aws-iam-user-k8s-ott-1-argocd-avp
 argocdNamespace: argocd
 clusterName: ott-1
+awsSsmRegion: us-east-2
