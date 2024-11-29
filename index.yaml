@@ -252,6 +252,26 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/external-secrets-manager-0.2.0/external-secrets-manager-0.2.0.tgz
     version: 0.2.0
+  metallb:
+  - apiVersion: v2
+    created: "2024-11-29T03:39:28.042265935Z"
+    dependencies:
+    - alias: metallb
+      condition: metallb.enabled
+      name: metallb
+      repository: https://metallb.github.io/metallb
+      version: 0.14.8
+    description: A Helm chart with metallb as sub chart and configs
+    digest: 0719d5c5d4155c1b79f91891c445de288dca1e17f66857ff05cb48ebb1a6cd98
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: metallb
+    sources:
+    - https://github.com/komailo/helm-charts
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/metallb-0.1.0/metallb-0.1.0.tgz
+    version: 0.1.0
   whoami:
   - apiVersion: v2
     appVersion: 1.10.3
@@ -328,4 +348,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-22T15:06:56.213927457Z"
+generated: "2024-11-29T03:39:28.042302814Z"
