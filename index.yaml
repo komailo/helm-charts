@@ -242,6 +242,30 @@ entries:
     version: 0.1.0
   external-secrets:
   - apiVersion: v2
+    created: "2024-11-29T04:37:30.02952663Z"
+    dependencies:
+    - condition: external-secrets.enabled
+      name: external-secrets
+      repository: https://charts.external-secrets.io
+      version: '>=0.10.5'
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: '>=0.1.0'
+    description: A Helm chart with external-secrets as subchart
+    digest: a83121d027db97bc75dd55c62ef056897d15efe5011cbd2576e091b5499a0022
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: external-secrets
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/external-secrets-1.1.1/external-secrets-1.1.1.tgz
+    version: 1.1.1
+  - apiVersion: v2
     created: "2024-11-29T04:33:53.335293346Z"
     dependencies:
     - condition: external-secrets.enabled
@@ -444,4 +468,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-29T04:33:53.335317511Z"
+generated: "2024-11-29T04:37:30.029551777Z"
