@@ -2,7 +2,7 @@ apiVersion: v2
 name: external-secrets
 description: A Helm chart with external-secrets as subchart
 type: application
-version: 1.0.0
+version: 1.1.0
 maintainers:
   - name: komailo
     url: https://github.com/komailo/helm-charts
