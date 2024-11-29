@@ -1,0 +1,5 @@
+ingress-nginx:
+  controller:
+    service:
+      annotations:
+        external-dns.alpha.kubernetes.io/hostname: ingress-nginx.<path:argocd:k8s-ott-1.external-dns.domain#domain>
