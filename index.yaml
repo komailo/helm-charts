@@ -277,6 +277,28 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/external-secrets-manager-0.2.0/external-secrets-manager-0.2.0.tgz
     version: 0.2.0
+  ingress-nginx:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2024-11-29T04:05:20.430538076Z"
+    dependencies:
+    - alias: ingress-nginx
+      condition: ingress-nginx.enabled
+      name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: '>=4.11.2'
+    description: A Helm chart with ingress-nginx as subchart
+    digest: 39878f4c063d28df848aa79be48161c907165f4560a2c1a4cec704f53f2bc398
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: ingress-nginx
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/ingress-nginx-0.1.0/ingress-nginx-0.1.0.tgz
+    version: 0.1.0
   metallb:
   - apiVersion: v2
     created: "2024-11-29T03:39:28.042265935Z"
@@ -373,4 +395,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-29T03:41:02.60328647Z"
+generated: "2024-11-29T04:05:20.430567912Z"
