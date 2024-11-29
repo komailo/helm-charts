@@ -15,6 +15,6 @@ dependencies:
     condition: external-secrets.enabled
   - name: external-secrets-manager
     version: ">=0.1.0"
-    repository: file://../../helm-charts/charts/external-secrets-manager
+    repository: https://komailo.github.io/helm-charts
     condition: external-secrets-manager.enabled
     alias: esm
