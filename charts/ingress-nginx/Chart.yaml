@@ -2,8 +2,8 @@ apiVersion: v2
 name: ingress-nginx
 description: A Helm chart with ingress-nginx as subchart
 type: application
-version: 0.1.0
-appVersion: "0.1.0"
+version: 0.2.0
+
 maintainers:
   - name: komailo
     url: https://github.com/komailo/helm-charts
