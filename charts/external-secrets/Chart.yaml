@@ -1,21 +1,20 @@
 apiVersion: v2
-name: cert-manager
-description: A Helm chart with cert-manager as subchart
+name: external-secrets
+description: A Helm chart with external-secrets as subchart
 type: application
-version: 0.3.0
+version: 2.0.0
 maintainers:
   - name: komailo
     url: https://github.com/komailo/helm-charts
 sources:
   - https://github.com/komailo/helm-charts
 dependencies:
-  - name: cert-manager
-    version: v1.16.2
-    repository: https://charts.jetstack.io
-    alias: cert-manager
-    condition: cert-manager.enabled
+  - name: external-secrets
+    version: ">=0.10.5"
+    repository: https://charts.external-secrets.io
+    condition: external-secrets.enabled
   - name: external-secrets-manager
-    version: "0.2.1"
+    version: ">=0.1.0"
     repository: https://komailo.github.io/helm-charts
     condition: external-secrets-manager.enabled
     alias: esm

@@ -3,7 +3,7 @@ name: external-dns
 description: A Helm chart for External DNS
 type: application
 
-version: 0.2.2
+version: 0.3.0
 
 maintainers:
   - name: komailo

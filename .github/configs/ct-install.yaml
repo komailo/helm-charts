@@ -8,6 +8,8 @@ excluded-charts:
   - cloudflare-tunnel-remote
   - common-library
   - external-dns
+  - external-secrets
+  - ingress-nginx
   - whoami
 github-groups: true
 target-branch: main
