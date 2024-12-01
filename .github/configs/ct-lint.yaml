@@ -6,3 +6,4 @@ exclude-deprecated: true
 excluded-charts: []
 github-groups: true
 target-branch: main
+use-helmignore: true
