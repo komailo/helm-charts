@@ -7,10 +7,12 @@
   },
   "minor": {
     "automerge": true,
+    "autoApprove": true,
     "bumpVersion": "minor"
   },
   "patch": {
     "automerge": true,
+    "autoApprove": true,
     "bumpVersion": "patch"
   },
   "labels": ["dependencies"]
