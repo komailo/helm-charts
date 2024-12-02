@@ -1,19 +1,34 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:best-practices"],
-  "major": {
-    "automerge": false,
-    "bumpVersion": "major"
-  },
-  "minor": {
-    "automerge": true,
-    "autoApprove": true,
-    "bumpVersion": "minor"
-  },
-  "patch": {
-    "automerge": true,
-    "autoApprove": true,
-    "bumpVersion": "patch"
-  },
-  "labels": ["dependencies"]
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "groupName": "Auto merge patch and no-op updates",
+      "matchUpdateTypes": ["patch", "pin", "digest"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true,
+      "autoApprove": true,
+      "bumpVersion": "patch",
+      "addLabels": ["patch"]
+    },
+    {
+      "groupName": "Auto merge minor updates",
+      "matchUpdateTypes": ["minor"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true,
+      "autoApprove": true,
+      "bumpVersion": "patch",
+      "addLabels": ["patch"]
+    },
+    {
+      "groupName": "Disable auto merge on major updates",
+      "matchUpdateTypes": ["major"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": false,
+      "autoApprove": false,
+      "bumpVersion": "major",
+      "addLabels": ["major"]
+    }
+  ]
 }
