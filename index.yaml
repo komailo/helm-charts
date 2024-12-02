@@ -658,6 +658,20 @@ entries:
     version: 0.1.0
   whoami:
   - apiVersion: v2
+    created: "2024-12-02T03:45:52.115168914Z"
+    description: A Helm Chart for whoami
+    digest: fefb035b17c705d44b7d6440bfa9952fb0b90f38ff211f38f0e561ad2d6750f0
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: whoami
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/whoami-1.0.1/whoami-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
     created: "2024-12-02T03:41:57.893595776Z"
     description: A Helm Chart for whoami
     digest: 5e6e4d661f6154f8aa6428ece66d89f80f7c2e68a8805f88b6a5c6d0d2c815f1
@@ -760,4 +774,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2024-12-02T03:41:57.893762889Z"
+generated: "2024-12-02T03:45:52.115253913Z"
