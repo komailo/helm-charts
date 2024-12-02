@@ -1,9 +1,0 @@
-dnsZones:
-  - <path:argocd:k8s-ott-1.external-dns.domain#domain>
-letsEncryptEmail: <path:argocd:k8s-global.cert-manager.lets-encrypt-email#email>
-my_test_value: Foo
-esm:
-  SimpleSecrets:
-    - name: digital-ocean-token
-      dataSecretKey: token
-      remoteRefKey: /k8s-ott-1/cert-manager/digital-ocean-token

@@ -1,3 +1,0 @@
-cloudflare-tunnel-remote:
-  cloudflare:
-    tunnel_token: <path:argocd:k8s-ott-1.cloudflare-remote-tunnel.tunnel-token#token>
