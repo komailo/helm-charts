@@ -4,6 +4,7 @@
 chart-repos: []
 exclude-deprecated: true
 excluded-charts:
+  - argocd-avp-secrets
   - cert-manager
   - cloudflare-tunnel-remote
   - common-library
