@@ -1,7 +1,7 @@
 apiVersion: v2
 name: metallb
 description: A Helm chart with metallb as sub chart and configs
-version: 1.0.0
+version: 1.1.0
 maintainers:
   - name: komailo
     url: https://github.com/komailo/helm-charts
@@ -9,7 +9,7 @@ sources:
   - https://github.com/komailo/helm-charts
 dependencies:
   - name: metallb
-    version: "0.14.8"
+    version: "0.14.9"
     repository: https://metallb.github.io/metallb
     alias: metallb
     condition: metallb.enabled
