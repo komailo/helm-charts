@@ -17,7 +17,7 @@ jobs:
       - name: Run ah lint
         working-directory: ./charts
         run: |
-          cat .git/config
+          cat ../.git/config
           ah lint
 
   ## Reference: https://github.com/helm/chart-testing-action
