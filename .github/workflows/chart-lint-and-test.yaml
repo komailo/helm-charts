@@ -16,7 +16,9 @@ jobs:
         uses: actions/checkout@master
       - name: Run ah lint
         working-directory: ./charts
-        run: ah lint
+        run: |
+          cat .git/config
+          ah lint
 
   ## Reference: https://github.com/helm/chart-testing-action
   helm-chart-test:
