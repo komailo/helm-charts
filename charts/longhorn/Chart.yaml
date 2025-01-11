@@ -1,0 +1,19 @@
+apiVersion: v2
+name: longhorn
+description: A Helm chart with longhorn as subchart
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+
+maintainers:
+  - name: komailo
+    url: https://github.com/komailo/helm-charts
+sources:
+  - https://github.com/komailo/helm-charts
+
+dependencies:
+  - name: longhorn
+    version: "1.7.1"
+    repository: https://charts.longhorn.io
+    alias: longhorn
+    condition: longhorn.enabled
