@@ -684,6 +684,28 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/ingress-nginx-0.1.0/ingress-nginx-0.1.0.tgz
     version: 0.1.0
+  longhorn:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-01-11T03:19:46.193728508Z"
+    dependencies:
+    - alias: longhorn
+      condition: longhorn.enabled
+      name: longhorn
+      repository: https://charts.longhorn.io
+      version: 1.7.1
+    description: A Helm chart with longhorn as subchart
+    digest: 3aea90ebc651a0c8e9b25fa25f0fbbb1f824fed0e2c62a23879d354ea735dbe0
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: longhorn
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/longhorn-0.1.0/longhorn-0.1.0.tgz
+    version: 0.1.0
   metallb:
   - apiVersion: v2
     created: "2024-12-21T00:32:57.18750714Z"
@@ -893,4 +915,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2024-12-21T00:32:57.187577211Z"
+generated: "2025-01-11T03:19:46.193790374Z"
