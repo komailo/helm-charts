@@ -340,6 +340,31 @@ entries:
     version: 0.3.0
   external-dns:
   - apiVersion: v2
+    created: "2025-02-14T17:15:05.525023883Z"
+    dependencies:
+    - alias: external-dns
+      condition: external-dns.enabled
+      name: external-dns
+      repository: https://kubernetes-sigs.github.io/external-dns/
+      version: 1.15.1
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 0.2.1
+    description: A Helm chart for External DNS
+    digest: 577c6fb2339232c16a48bfc542ab565f44461fc733d53e7b83b6b7dddc2ce13e
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: external-dns
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/external-dns-1.0.1/external-dns-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
     created: "2024-12-02T03:41:57.440282246Z"
     dependencies:
     - alias: external-dns
@@ -830,6 +855,20 @@ entries:
     version: 0.1.0
   whoami:
   - apiVersion: v2
+    created: "2025-02-14T17:15:05.628373988Z"
+    description: A Helm Chart for whoami
+    digest: 493fe25227729712ce7debed66c24f0e2b328bef288d8155d1c797a3437fd43c
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: whoami
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/whoami-1.0.4/whoami-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
     created: "2025-02-13T22:00:54.781802455Z"
     description: A Helm Chart for whoami
     digest: 16e5c3d7996a7ce94e8785719dde25d3f01f7f94482538a43847905760c7da67
@@ -974,4 +1013,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2025-02-13T22:00:54.781892905Z"
+generated: "2025-02-14T17:15:05.62850501Z"
