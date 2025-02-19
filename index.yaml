@@ -340,6 +340,31 @@ entries:
     version: 0.3.0
   external-dns:
   - apiVersion: v2
+    created: "2025-02-19T04:29:12.000829035Z"
+    dependencies:
+    - alias: external-dns
+      condition: external-dns.enabled
+      name: external-dns
+      repository: https://kubernetes-sigs.github.io/external-dns/
+      version: 1.15.2
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 0.2.1
+    description: A Helm chart for External DNS
+    digest: 5e25bc35faccd5f502be07183eb9701649640f2684fb8d5c5b2654f163602ca2
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: external-dns
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/external-dns-1.0.2/external-dns-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
     created: "2025-02-14T17:15:05.525023883Z"
     dependencies:
     - alias: external-dns
@@ -1028,4 +1053,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2025-02-19T04:28:12.20903729Z"
+generated: "2025-02-19T04:29:12.0009226Z"
