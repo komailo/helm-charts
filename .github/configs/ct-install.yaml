@@ -11,6 +11,7 @@ excluded-charts:
   - external-dns
   - external-secrets
   - ingress-nginx
+  - k8s-metrics-server
   - whoami
 github-groups: true
 target-branch: main
