@@ -1,0 +1,19 @@
+apiVersion: v2
+name: k8s-metrics-server
+description: A Helm chart for Kubernetes Metrics Server
+type: application
+
+version: 1.0.0
+
+maintainers:
+  - name: komailo
+    url: https://github.com/komailo/helm-charts
+sources:
+  - https://github.com/komailo/helm-charts
+
+dependencies:
+  - name: metrics-server
+    version: "3.12.2"
+    repository: https://kubernetes-sigs.github.io/metrics-server/
+    alias: metrics-server
+    condition: metrics-server.enabled
