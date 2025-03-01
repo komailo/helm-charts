@@ -759,6 +759,27 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/ingress-nginx-0.1.0/ingress-nginx-0.1.0.tgz
     version: 0.1.0
+  k8s-metrics-server:
+  - apiVersion: v2
+    created: "2025-03-01T21:15:39.025682839Z"
+    dependencies:
+    - alias: metrics-server
+      condition: metrics-server.enabled
+      name: metrics-server
+      repository: https://kubernetes-sigs.github.io/metrics-server/
+      version: 3.12.2
+    description: A Helm chart for Kubernetes Metrics Server
+    digest: 354d8a95427ca0902e9f0a8fc0ef32eb0d1f5bab6d6cd7ba59b37ffbe0588bb8
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: k8s-metrics-server
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/k8s-metrics-server-1.0.0/k8s-metrics-server-1.0.0.tgz
+    version: 1.0.0
   longhorn:
   - apiVersion: v2
     created: "2025-02-02T00:33:55.622885716Z"
@@ -1068,4 +1089,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2025-03-01T20:15:41.200410124Z"
+generated: "2025-03-01T21:15:39.025752699Z"
