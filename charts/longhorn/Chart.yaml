@@ -2,7 +2,7 @@ apiVersion: v2
 name: longhorn
 description: A Helm chart with longhorn as subchart
 type: application
-version: 0.2.0
+version: 0.2.1
 
 maintainers:
   - name: komailo
@@ -12,7 +12,7 @@ sources:
 
 dependencies:
   - name: longhorn
-    version: "1.8.0"
+    version: "1.8.1"
     repository: https://charts.longhorn.io
     alias: longhorn
     condition: longhorn.enabled
