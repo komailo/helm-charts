@@ -3,7 +3,7 @@ name: external-dns
 description: A Helm chart for External DNS
 type: application
 
-version: 1.1.1
+version: 1.2.0
 
 maintainers:
   - name: komailo
@@ -13,7 +13,7 @@ sources:
 
 dependencies:
   - name: external-dns
-    version: "1.16.1"
+    version: "1.18.0"
     repository: https://kubernetes-sigs.github.io/external-dns/
     alias: external-dns
     condition: external-dns.enabled
