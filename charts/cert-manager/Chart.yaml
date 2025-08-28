@@ -2,7 +2,7 @@ apiVersion: v2
 name: cert-manager
 description: A Helm chart with cert-manager as subchart
 type: application
-version: 1.1.1
+version: 1.2.0
 maintainers:
   - name: komailo
     url: https://github.com/komailo/helm-charts
@@ -10,7 +10,7 @@ sources:
   - https://github.com/komailo/helm-charts
 dependencies:
   - name: cert-manager
-    version: v1.17.2
+    version: v1.18.2
     repository: https://charts.jetstack.io
     alias: cert-manager
     condition: cert-manager.enabled
