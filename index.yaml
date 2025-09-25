@@ -952,6 +952,26 @@ entries:
     version: 1.0.0
   longhorn:
   - apiVersion: v2
+    created: "2025-09-25T22:14:15.798063293Z"
+    dependencies:
+    - alias: longhorn
+      condition: longhorn.enabled
+      name: longhorn
+      repository: https://charts.longhorn.io
+      version: 1.10.0
+    description: A Helm chart with longhorn as subchart
+    digest: 9a90c2cb5cc858f93825c87ab1d5adafe3ebf17fa3b2370dab0f9d865fc28da9
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: longhorn
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/longhorn-0.4.0/longhorn-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
     created: "2025-09-24T16:40:55.187571863Z"
     dependencies:
     - alias: longhorn
@@ -1319,4 +1339,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2025-09-24T16:40:55.18769296Z"
+generated: "2025-09-25T22:14:15.798186884Z"
