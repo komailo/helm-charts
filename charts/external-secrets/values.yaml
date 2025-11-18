@@ -1,5 +1,3 @@
 ---
-argocdAvpAwsIamSecretName:
-argocdNamespace: argocd
 clusterName:
 awsSsmRegion:
