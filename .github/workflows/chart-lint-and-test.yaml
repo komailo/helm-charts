@@ -9,7 +9,7 @@ jobs:
   artifacthub-lint:
     runs-on: ubuntu-24.04
     container:
-      image: artifacthub/ah@sha256:d7ac104523deaf309d3cbe0b6fd31ff636ad4ec28323a6e922af7940a3d60bf8
+      image: artifacthub/ah@sha256:ffdb21cf1bbcea79c10a5f702eace08f841ff635e96c849594c338a048652b6b
       options: --user root
     steps:
       - name: Checkout code
@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
         with:
           fetch-depth: 0
 
@@ -32,7 +32,7 @@ jobs:
         with:
           version: v3.16.2
 
-      - uses: actions/setup-python@8d9ed9ac5c53483de85588cdf95a591a75ab9f55 # v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: "3.x"
           check-latest: true
