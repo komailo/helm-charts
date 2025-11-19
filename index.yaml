@@ -2,6 +2,26 @@ apiVersion: v1
 entries:
   argocd-avp-secrets:
   - apiVersion: v2
+    created: "2025-11-19T04:40:12.021578928Z"
+    dependencies:
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 0.2.1
+    description: A Helm chart for managing external secrets for AVP use in ArgoCD
+    digest: c998c7c5a5a5d96b32e7332ea96d14336761a77d20aa5cf23f894ca173b3bc09
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: argocd-avp-secrets
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/argocd-avp-secrets-1.1.0/argocd-avp-secrets-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
     created: "2024-12-02T23:40:07.138048726Z"
     dependencies:
     - alias: esm
@@ -1457,4 +1477,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2025-11-19T04:03:33.286315121Z"
+generated: "2025-11-19T04:40:12.021743567Z"
