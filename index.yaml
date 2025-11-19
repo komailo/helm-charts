@@ -436,6 +436,20 @@ entries:
     version: 0.1.0
   common-library:
   - apiVersion: v2
+    created: "2025-11-19T04:51:32.965266102Z"
+    description: A Helm library chart
+    digest: abbd27496e952b8850ca29eb5e3c0758be77643aaf56fded9eeb3db0e7c71db2
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: common-library
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: library
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/common-library-0.4.0/common-library-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
     created: "2024-11-18T01:31:44.628366175Z"
     description: A Helm library chart
     digest: fb59f5ca8f5eb2a556cc3c278943ec77f397a2a37ccce92efae3206b25c4f247
@@ -1496,4 +1510,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2025-11-19T04:43:05.58456717Z"
+generated: "2025-11-19T04:51:32.965404089Z"
