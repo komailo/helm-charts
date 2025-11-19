@@ -2,7 +2,7 @@ apiVersion: v2
 name: common-library
 description: A Helm library chart
 type: library
-version: 0.3.1
+version: 0.4.0
 maintainers:
   - name: komailo
     url: https://github.com/komailo/helm-charts
