@@ -2,3 +2,9 @@ esm:
   globals:
     secretStoreRefName: aws-ssm-parameter-store-argocd-avp
     secretStoreRefKind: SecretStore
+awsParameterStore:
+  enable: true
+  iamSecretRef:
+    name:
+    namespace:
+  region:
