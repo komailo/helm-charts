@@ -2,7 +2,7 @@ apiVersion: v2
 name: external-secrets
 description: A Helm chart with external-secrets as subchart
 type: application
-version: 4.0.1
+version: 4.1.0
 maintainers:
   - name: komailo
     url: https://github.com/komailo/helm-charts
@@ -14,7 +14,7 @@ dependencies:
     repository: https://charts.external-secrets.io
     condition: external-secrets.enabled
   - name: external-secrets-manager
-    version: ">=0.1.0"
+    version: ">=0.3.0"
     repository: https://komailo.github.io/helm-charts
     condition: external-secrets-manager.enabled
     alias: esm
