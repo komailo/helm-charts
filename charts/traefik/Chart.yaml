@@ -1,0 +1,17 @@
+apiVersion: v2
+name: traefik
+description: A Helm chart with traefik as subchart
+type: application
+version: 0.1.0
+
+maintainers:
+  - name: komailo
+    url: https://github.com/komailo/helm-charts
+sources:
+  - https://github.com/komailo/helm-charts
+dependencies:
+  - name: traefik
+    version: "37.4.0"
+    repository: oci://ghcr.io/traefik/helm
+    alias: traefik
+    condition: traefik.enabled
