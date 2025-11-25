@@ -1,5 +1,20 @@
 apiVersion: v1
 entries:
+  app-chart:
+  - apiVersion: v2
+    created: "2025-11-25T17:56:06.874416268Z"
+    description: A Helm Chart for generating Kubernetes resources for app deployment
+    digest: 5d5b93ddc48c53cc5acd5dfc21f2a73bc1cee402ac7ef8c22b336007b6ee6367
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: app-chart
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/app-chart-0.1.0/app-chart-0.1.0.tgz
+    version: 0.1.0
   argocd-avp-secrets:
   - apiVersion: v2
     created: "2025-11-19T05:00:33.095968153Z"
@@ -1632,4 +1647,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2025-11-21T14:52:01.290688223Z"
+generated: "2025-11-25T17:56:06.874576809Z"
