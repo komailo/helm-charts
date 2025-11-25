@@ -2,6 +2,7 @@
 cert-manager:
   crds:
     enabled: true
+  enableCertificateOwnerRef: true
 
 dnsZones: []
 doTokenSealedSecrets: ""
