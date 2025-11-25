@@ -17,8 +17,11 @@ kind: Ingress
 metadata:
   name: {{ $ingressName }}
   namespace: {{ $.Release.Namespace }}
-{{- if $ing.annotations }}
+{{- if or ($ing.annotations) ($ing.certManagerClusterIssuer) }}
   annotations:
+{{- if $ing.certManagerClusterIssuer }}
+    cert-manager.io/cluster-issuer: {{ $ing.certManagerClusterIssuer | quote }}
+{{- end }}
 {{- range $key, $value := $ing.annotations }}
     {{ $key }}: {{ $value | quote }}
 {{- end }}
