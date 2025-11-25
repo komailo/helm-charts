@@ -5,6 +5,7 @@
 #     ingress:
 #       enabled: false
 #       className: nginx
+#       certManagerClusterIssuer: "letsencrypt-prod"
 #       annotations: {}
 #       hosts:
 #         - host: whoami.local
