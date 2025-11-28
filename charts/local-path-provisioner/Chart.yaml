@@ -2,7 +2,7 @@ apiVersion: v2
 name: local-path-provisioner
 description: A Helm chart with local-path-provisioner as subchart
 type: application
-version: 1.0.0
+version: 1.1.0
 maintainers:
   - name: komailo
     url: https://github.com/komailo/helm-charts
@@ -13,3 +13,4 @@ dependencies:
     version: ">=0.0.0"
     repository: "file://./deps/local-path-provisioner-src/deploy/chart/local-path-provisioner"
     alias: local-path-provisioner
+    condition: local-path-provisioner.enabled
