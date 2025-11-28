@@ -1,1 +1,8 @@
----
+defaultPaths:
+
+nodePaths:
+  # node-1:
+  #   - /mnt/local-path
+
+local-path-provisioner:
+  enabled: false
