@@ -1248,6 +1248,26 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/k8s-metrics-server-1.0.0/k8s-metrics-server-1.0.0.tgz
     version: 1.0.0
+  local-path-provisioner:
+  - apiVersion: v2
+    created: "2025-11-28T16:27:14.739665482Z"
+    dependencies:
+    - alias: local-path-provisioner
+      name: local-path-provisioner
+      repository: file://./deps/local-path-provisioner-src/deploy/chart/local-path-provisioner
+      version: '>=0.0.0'
+    description: A Helm chart with local-path-provisioner as subchart
+    digest: 0635a63ea398614b750ae3bd54fa7ffaa4a3acadb65d7442e627efa10b72fc29
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: local-path-provisioner
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/local-path-provisioner-1.0.0/local-path-provisioner-1.0.0.tgz
+    version: 1.0.0
   longhorn:
   - apiVersion: v2
     created: "2025-11-12T17:07:36.116287574Z"
@@ -1711,4 +1731,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2025-11-25T19:13:53.887828676Z"
+generated: "2025-11-28T16:27:14.739810032Z"
