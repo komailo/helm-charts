@@ -12,6 +12,7 @@ excluded-charts:
   - external-secrets
   - ingress-nginx
   - k8s-metrics-server
+  - local-path-provisioner
   - traefik
   - whoami
 github-groups: true
