@@ -1,8 +1,11 @@
 defaultPaths:
 
-nodePaths:
-  # node-1:
-  #   - /mnt/local-path
+# nodePaths:
+#   node-1:
+#     - /mnt/k8s-data-tier-1
+
+# storageClassNames:
+#   /mnt/k8s-data-tier-1: k8s-data-tier-1 # path -> storageClass name mapping
 
 local-path-provisioner:
   enabled: false

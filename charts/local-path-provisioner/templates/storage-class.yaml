@@ -1,0 +1,39 @@
+{{- $storageClassNames := .Values.storageClassNames | default dict }}
+{{- $paths := list }}
+{{- range $p := .Values.defaultPaths }}
+  {{- if $p }}
+    {{- $paths = append $paths $p }}
+  {{- end }}
+{{- end }}
+{{- range $_, $nodePaths := .Values.nodePaths }}
+  {{- range $p := $nodePaths }}
+    {{- if $p }}
+      {{- $paths = append $paths $p }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- $unique := dict }}
+{{- range $p := $paths }}
+  {{- $trimmed := trim $p }}
+  {{- if $trimmed }}
+    {{- $_ := set $unique $trimmed true }}
+  {{- end }}
+{{- end }}
+{{- $uniquePaths := keys $unique | sortAlpha }}
+{{- range $path := $uniquePaths }}
+{{- if not (hasKey $storageClassNames $path) }}
+  {{- fail (printf "storageClassNames is missing a name for path %s" $path) }}
+{{- end }}
+{{- $safeName := index $storageClassNames $path }}
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: {{ $safeName }}
+provisioner: rancher.io/local-path
+parameters:
+  nodePath: "{{ $path }}"
+  pathPattern: {{ "\"{{ .PVC.Namespace }}/{{ .PVC.Name }}\"" }}
+volumeBindingMode: WaitForFirstConsumer
+reclaimPolicy: Delete
+{{- end }}
