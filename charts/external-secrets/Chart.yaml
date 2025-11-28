@@ -10,7 +10,7 @@ sources:
   - https://github.com/komailo/helm-charts
 dependencies:
   - name: external-secrets
-    version: ">=0.10.5"
+    version: ">=1.1.0"
     repository: https://charts.external-secrets.io
     condition: external-secrets.enabled
   - name: external-secrets-manager
