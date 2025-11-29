@@ -1,0 +1,64 @@
+{{- define "external-secret-manager.base" -}}
+---
+apiVersion: external-secrets.io/v1
+kind: ExternalSecret
+metadata:
+  name: {{ .item.name }}
+  {{- if .item.namespace }}
+  namespace: "{{ .item.namespace }}"
+  {{- end }}
+spec:
+  refreshInterval: "{{ .refreshInterval | default .Values.globals.refreshInterval }}"
+  secretStoreRef:
+    name: "{{ .secretStoreRefName | default .Values.globals.secretStoreRefName }}"
+    kind: "{{ .secretStoreRefKind | default .Values.globals.secretStoreRefKind }}"
+  target:
+    name: "{{ .item.targetName | default .item.name }}"
+    creationPolicy: Owner
+{{- end -}}
+
+{{- define "external-secret-manager.overide.simple" -}}
+spec:
+  data:
+    - secretKey: "{{ .item.dataSecretKey }}"
+      remoteRef:
+        key: "{{ .item.remoteRefKey }}"
+{{- end -}}
+
+{{- define "external-secret-manager.overide.subpath" -}}
+spec:
+  dataFrom:
+    - find:
+        path: "{{ .item.remoteRefKey }}"
+        name:
+          regexp: ".*"
+      rewrite:
+        - regexp:
+            source: "[^a-zA-Z0-9 -]"
+            target: "_"
+        - regexp:
+            source: "{{ .item.remoteRefKey }}/(.*)"
+            target: "$1"
+{{- end -}}
+
+{{- define "external-secret-manager.simple" -}}
+{{- $Values := .Values }}
+{{- range $index, $item := $Values.SimpleSecrets -}}
+{{- $context := dict "item" $item "Values" $Values -}}
+{{- with $context }}
+---
+{{ include "common.utils.merge" (list . "external-secret-manager.overide.simple" "external-secret-manager.base") }}
+{{- end -}}
+{{- end -}}
+{{- end -}}
+
+{{- define "external-secret-manager.subpath" -}}
+{{- $Values := .Values }}
+{{- range $index, $item := $Values.SubPathSecrets -}}
+{{- $context := dict "item" $item "Values" $Values -}}
+{{- with $context }}
+---
+{{ include "common.utils.merge" (list . "external-secret-manager.overide.subpath" "external-secret-manager.base") }}
+{{- end -}}
+{{- end -}}
+{{- end -}}
