@@ -2,3 +2,12 @@ globals:
   secretStoreRefKind: ClusterSecretStore
   secretStoreRefName: aws-ssm-parameter-store-default
   refreshInterval: 24h
+
+SimpleSecrets:
+  # - name: dns-token
+  #   dataSecretKey: token
+  #   remoteRefKey: /blah/external-dns/dns-token
+
+SubPathSecrets:
+  # - name: backup-secrets
+  #   remoteRefKey: /k8s-dev/backup

@@ -1,0 +1,8 @@
+SimpleSecrets:
+  - name: dns-token
+    dataSecretKey: token
+    remoteRefKey: /blah/external-dns/dns-token
+
+SubPathSecrets:
+  - name: backup-secrets
+    remoteRefKey: /k8s-dev/backup
