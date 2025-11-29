@@ -4,9 +4,7 @@ apiVersion: external-secrets.io/v1
 kind: ExternalSecret
 metadata:
   name: {{ .item.name }}
-  {{- if .item.namespace }}
-  namespace: "{{ .item.namespace }}"
-  {{- end }}
+  namespace: "{{ .item.namespace | default .Release.Namespace | default "default" }}"
 spec:
   refreshInterval: "{{ .refreshInterval | default .Values.globals.refreshInterval }}"
   secretStoreRef:
@@ -43,8 +41,9 @@ spec:
 
 {{- define "external-secret-manager.simple" -}}
 {{- $Values := .Values }}
+{{- $Release := .Release }}
 {{- range $index, $item := $Values.SimpleSecrets -}}
-{{- $context := dict "item" $item "Values" $Values -}}
+{{- $context := dict "item" $item "Values" $Values "Release" $Release -}}
 {{- with $context }}
 ---
 {{ include "common.utils.merge" (list . "external-secret-manager.overide.simple" "external-secret-manager.base") }}
@@ -54,8 +53,9 @@ spec:
 
 {{- define "external-secret-manager.subpath" -}}
 {{- $Values := .Values }}
+{{- $Release := .Release }}
 {{- range $index, $item := $Values.SubPathSecrets -}}
-{{- $context := dict "item" $item "Values" $Values -}}
+{{- $context := dict "item" $item "Values" $Values "Release" $Release -}}
 {{- with $context }}
 ---
 {{ include "common.utils.merge" (list . "external-secret-manager.overide.subpath" "external-secret-manager.base") }}
