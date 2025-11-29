@@ -32,11 +32,11 @@ spec:
           regexp: ".*"
       rewrite:
         - regexp:
-            source: "[^a-zA-Z0-9 -]"
-            target: "_"
-        - regexp:
             source: "{{ .item.remoteRefKey }}/(.*)"
             target: "$1"
+        - regexp:
+            source: "[^a-zA-Z0-9 -]"
+            target: "_"
 {{- end -}}
 
 {{- define "external-secret-manager.simple" -}}
