@@ -45,7 +45,6 @@ spec:
 {{- range $index, $item := $Values.SimpleSecrets -}}
 {{- $context := dict "item" $item "Values" $Values "Release" $Release -}}
 {{- with $context }}
----
 {{ include "common.utils.merge" (list . "external-secret-manager.overide.simple" "external-secret-manager.base") }}
 {{- end -}}
 {{- end -}}
@@ -57,7 +56,6 @@ spec:
 {{- range $index, $item := $Values.SubPathSecrets -}}
 {{- $context := dict "item" $item "Values" $Values "Release" $Release -}}
 {{- with $context }}
----
 {{ include "common.utils.merge" (list . "external-secret-manager.overide.subpath" "external-secret-manager.base") }}
 {{- end -}}
 {{- end -}}
