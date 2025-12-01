@@ -1256,6 +1256,24 @@ entries:
     version: 1.0.0
   external-secrets-manager:
   - apiVersion: v2
+    created: "2025-12-01T02:06:19.322259795Z"
+    dependencies:
+    - name: common-library
+      repository: https://komailo.github.io/helm-charts
+      version: 0.4.0
+    description: A Helm chart to create external secret objects
+    digest: 64c324f155e9b641978934d0e9cc0d5820ae29f7346cd11f34cd9cd4c801f960
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: external-secrets-manager
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/external-secrets-manager-1.0.3/external-secrets-manager-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v2
     created: "2025-11-29T21:31:19.325887162Z"
     dependencies:
     - name: common-library
@@ -1989,4 +2007,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2025-11-30T02:44:38.22306146Z"
+generated: "2025-12-01T02:06:19.322427108Z"
