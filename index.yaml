@@ -31,6 +31,26 @@ entries:
     version: 0.1.0
   argocd-avp-secrets:
   - apiVersion: v2
+    created: "2025-12-01T13:56:08.864236253Z"
+    dependencies:
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 1.0.3
+    description: A Helm chart for managing external secrets for AVP use in ArgoCD
+    digest: 121c94b80d291ae7ddf567fe7633ca95b689772d34785946c57e44891ee29cc2
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: argocd-avp-secrets
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/argocd-avp-secrets-1.3.2/argocd-avp-secrets-1.3.2.tgz
+    version: 1.3.2
+  - apiVersion: v2
     created: "2025-11-30T02:44:37.891965764Z"
     dependencies:
     - alias: esm
@@ -171,6 +191,31 @@ entries:
     - https://github.com/komailo/helm-charts/releases/download/argocd-avp-secrets-1.0.0/argocd-avp-secrets-1.0.0.tgz
     version: 1.0.0
   cert-manager:
+  - apiVersion: v2
+    created: "2025-12-01T13:56:09.071148387Z"
+    dependencies:
+    - alias: cert-manager
+      condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.19.1
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 1.0.3
+    description: A Helm chart with cert-manager as subchart
+    digest: 546643e2c05f93e8e2fa1c272ff9d79f54b731504f38de99d000ba563b124e17
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: cert-manager
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/cert-manager-1.6.2/cert-manager-1.6.2.tgz
+    version: 1.6.2
   - apiVersion: v2
     created: "2025-11-30T02:44:38.051033999Z"
     dependencies:
@@ -662,6 +707,31 @@ entries:
     - https://github.com/komailo/helm-charts/releases/download/common-library-0.3.0/common-library-0.3.0.tgz
     version: 0.3.0
   external-dns:
+  - apiVersion: v2
+    created: "2025-12-01T13:56:09.293566641Z"
+    dependencies:
+    - alias: external-dns
+      condition: external-dns.enabled
+      name: external-dns
+      repository: https://kubernetes-sigs.github.io/external-dns/
+      version: 1.19.0
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 1.0.3
+    description: A Helm chart for External DNS
+    digest: c0c4c5271b2fa27bfff86a05382b53341cbb358546fe198d51d16c15fc05f469
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: external-dns
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/external-dns-1.5.2/external-dns-1.5.2.tgz
+    version: 1.5.2
   - apiVersion: v2
     created: "2025-11-30T02:44:38.222723467Z"
     dependencies:
@@ -2007,4 +2077,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2025-12-01T02:06:19.322427108Z"
+generated: "2025-12-01T13:56:09.293948948Z"
