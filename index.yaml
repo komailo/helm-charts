@@ -1541,6 +1541,26 @@ entries:
     version: 0.2.0
   ingress-nginx:
   - apiVersion: v2
+    created: "2025-12-02T02:32:21.853223357Z"
+    dependencies:
+    - alias: ingress-nginx
+      condition: ingress-nginx.enabled
+      name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: '>=4.11.2'
+    description: A Helm chart with ingress-nginx as subchart
+    digest: c793f68a4c98eaf4592055dd89b04a2b352fffd8f7c19fd4e4590d1f9b4210a0
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: ingress-nginx
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/ingress-nginx-1.1.0/ingress-nginx-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
     created: "2024-12-02T03:41:57.663194481Z"
     dependencies:
     - alias: ingress-nginx
@@ -2165,4 +2185,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2025-12-02T02:29:05.424484956Z"
+generated: "2025-12-02T02:32:21.853360424Z"
