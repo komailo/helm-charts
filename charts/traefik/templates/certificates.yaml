@@ -9,5 +9,5 @@ spec:
   dnsNames:
     - ingress-traefik.{{ .Values.clusterDomain }}
   issuerRef:
-    name: "{{ .Values.certManagerClusterIssuer}}"
+    name: "{{ .Values.certManagerClusterIssuer }}"
     kind: ClusterIssuer
