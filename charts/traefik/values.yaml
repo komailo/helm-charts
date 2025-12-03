@@ -1,0 +1,7 @@
+clusterDomain: ~
+certManagerClusterIssuer: ~
+traefik:
+  tlsStore:
+    default:
+      defaultCertificate:
+        secretName: ingress-traefik-tls

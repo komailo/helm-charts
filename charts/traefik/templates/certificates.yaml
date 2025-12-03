@@ -1,0 +1,13 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: ingress-traefik
+  namespace: "{{ .Release.Namespace }}"
+spec:
+  secretName: ingress-traefik-tls
+  dnsNames:
+    - ingress-traefik.{{ .Values.clusterDomain }}
+  issuerRef:
+    name: "{{ .Values.certManagerClusterIssuer }}"
+    kind: ClusterIssuer
