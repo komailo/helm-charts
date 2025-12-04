@@ -1,5 +1,0 @@
-externalDnsDomain: ""
-instanceName: "whoami"
-argoRollout: false
-image:
-  repository: "traefik/whoami"
