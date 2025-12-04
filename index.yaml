@@ -1,5 +1,696 @@
 apiVersion: v1
 entries:
+  app-chart:
+  - apiVersion: v2
+    created: "2025-12-03T23:31:10.324335-05:00"
+    description: A Helm Chart for generating Kubernetes resources for app deployment
+    digest: 56a9c7ada1b05dc34f8dd440876925594ee04bd368737843c9d97fd620182dbe
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: app-chart
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/app-chart-0.2.0/app-chart-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    created: "2025-12-03T23:31:10.167467-05:00"
+    description: A Helm Chart for generating Kubernetes resources for app deployment
+    digest: 5d5b93ddc48c53cc5acd5dfc21f2a73bc1cee402ac7ef8c22b336007b6ee6367
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: app-chart
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/app-chart-0.1.0/app-chart-0.1.0.tgz
+    version: 0.1.0
+  argocd-avp-secrets:
+  - apiVersion: v2
+    created: "2025-12-03T23:31:10.7554-05:00"
+    dependencies:
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 0.2.1
+    description: A Helm chart for managing external secrets for AVP use in ArgoCD
+    digest: aae71bf8f5bc6e6cad7e37fdd7e0083de7c19e4c0f4ee950de4e3fb5bf4be3e5
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: argocd-avp-secrets
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/argocd-avp-secrets-1.0.2/argocd-avp-secrets-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    created: "2025-12-03T23:31:10.606558-05:00"
+    dependencies:
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 0.2.1
+    description: A Helm chart for managing external secrets for AVP use in ArgoCD
+    digest: e683db663ef4595c111b8e9838aecdb0b6e862293680a1bbc4f29190b9dfe975
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: argocd-avp-secrets
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/argocd-avp-secrets-1.0.1/argocd-avp-secrets-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    created: "2025-12-03T23:31:10.463955-05:00"
+    dependencies:
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 0.2.0
+    description: A Helm chart for managing external secrets for AVP use in ArgoCD
+    digest: 2b12f7198392e01d1d04bddd013c38b0608a38d8819000c1b56c5e7865bb966e
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: argocd-avp-secrets
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/argocd-avp-secrets-1.0.0/argocd-avp-secrets-1.0.0.tgz
+    version: 1.0.0
+  cert-manager:
+  - apiVersion: v2
+    created: "2025-12-03T23:31:11.27789-05:00"
+    dependencies:
+    - alias: cert-manager
+      condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.16.2
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 0.2.1
+    description: A Helm chart with cert-manager as subchart
+    digest: d0b2cf844704c7945bdd0c23be2003ba19b82cfd4f471f2edde3a3010c07a17a
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: cert-manager
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/cert-manager-0.2.1/cert-manager-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
+    created: "2025-12-03T23:31:11.110078-05:00"
+    dependencies:
+    - alias: cert-manager
+      condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.16.1
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 0.2.1
+    description: A Helm chart with cert-manager as subchart
+    digest: 4a043a53cdaf0dfffa63a1dc26dd2867f012857edf3659f2718e78bf7460dbc7
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: cert-manager
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/cert-manager-0.2.0/cert-manager-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    created: "2025-12-03T23:31:10.952012-05:00"
+    dependencies:
+    - alias: cert-manager
+      condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.15.3
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 0.2.1
+    description: A Helm chart with cert-manager as subchart
+    digest: 7a518d81a72bed320b2d003cf6c211471b411702890a2f7e69940151a88c2954
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: cert-manager
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/cert-manager-0.1.0/cert-manager-0.1.0.tgz
+    version: 0.1.0
+  cloudflare-tunnel-remote:
+  - apiVersion: v2
+    created: "2025-12-03T23:31:11.693968-05:00"
+    dependencies:
+    - alias: cloudflare-tunnel-remote
+      condition: cloudflare-tunnel-remote.enabled
+      name: cloudflare-tunnel-remote
+      repository: https://cloudflare.github.io/helm-charts
+      version: 0.1.2
+    description: A Helm chart with cloudflare-tunnel-remote as subchart
+    digest: afd7fc77058b7886b8dd5711fe78c26929bd107e2d05243bba671e094079a6c7
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: cloudflare-tunnel-remote
+    sources:
+    - https://github.com/komailo/helm-charts
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/cloudflare-tunnel-remote-0.2.0/cloudflare-tunnel-remote-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    created: "2025-12-03T23:31:11.554845-05:00"
+    dependencies:
+    - alias: cloudflare-tunnel-remote
+      condition: cloudflare-tunnel-remote.enabled
+      name: cloudflare-tunnel-remote
+      repository: https://cloudflare.github.io/helm-charts
+      version: 0.1.2
+    description: A Helm chart with cloudflare-tunnel-remote as subchart
+    digest: 3f9fc4389304c0748e333761e09075e70f2f178ea4e2f9b9f3cf5ad280f83c6e
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: cloudflare-tunnel-remote
+    sources:
+    - https://github.com/komailo/helm-charts
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/cloudflare-tunnel-remote-0.1.1/cloudflare-tunnel-remote-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    created: "2025-12-03T23:31:11.407234-05:00"
+    dependencies:
+    - alias: cloudflare-tunnel-remote
+      condition: cloudflare-tunnel-remote.enabled
+      name: cloudflare-tunnel-remote
+      repository: https://cloudflare.github.io/helm-charts
+      version: '>=0.1.2'
+    description: A Helm chart with cloudflare-tunnel-remote as subchart
+    digest: eb66e18049106e4347e0c6bfce03353cf152c0cefb8a3bc95d5fe03b31a2c80e
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: cloudflare-tunnel-remote
+    sources:
+    - https://github.com/komailo/helm-charts
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/cloudflare-tunnel-remote-0.1.0/cloudflare-tunnel-remote-0.1.0.tgz
+    version: 0.1.0
+  common-library:
+  - apiVersion: v2
+    created: "2025-12-03T23:31:12.098626-05:00"
+    description: A Helm library chart
+    digest: abbd27496e952b8850ca29eb5e3c0758be77643aaf56fded9eeb3db0e7c71db2
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: common-library
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: library
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/common-library-0.4.0/common-library-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
+    created: "2025-12-03T23:31:11.969924-05:00"
+    description: A Helm library chart
+    digest: fb59f5ca8f5eb2a556cc3c278943ec77f397a2a37ccce92efae3206b25c4f247
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: common-library
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: library
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/common-library-0.3.1/common-library-0.3.1.tgz
+    version: 0.3.1
+  - apiVersion: v2
+    created: "2025-12-03T23:31:11.834295-05:00"
+    description: A Helm library chart
+    digest: 7ed957dbc3d80da5df7db408aeaba96643241ed7bb6b67aa65cd6dce00d970b6
+    name: common-library
+    type: library
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/common-library-0.3.0/common-library-0.3.0.tgz
+    version: 0.3.0
+  external-dns:
+  - apiVersion: v2
+    created: "2025-12-03T23:31:12.58804-05:00"
+    dependencies:
+    - alias: external-dns
+      condition: external-dns.enabled
+      name: external-dns
+      repository: https://kubernetes-sigs.github.io/external-dns/
+      version: 1.15.0
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 0.2.1
+    description: A Helm chart for External DNS
+    digest: e2428426728f9699d24595d65bd74f29026fdaf08090e8a915c1a790ed878734
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: external-dns
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/external-dns-0.2.1/external-dns-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
+    created: "2025-12-03T23:31:12.421374-05:00"
+    dependencies:
+    - alias: external-dns
+      condition: external-dns.enabled
+      name: external-dns
+      repository: https://kubernetes-sigs.github.io/external-dns/
+      version: 1.15.0
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 0.2.0
+    description: A Helm chart for External DNS
+    digest: ea763410f673feacb79508c8f0081b761b262d26cf5ade1de4952928221c50ad
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: external-dns
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/external-dns-0.2.0/external-dns-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    created: "2025-12-03T23:31:12.261086-05:00"
+    dependencies:
+    - alias: external-dns
+      condition: external-dns.enabled
+      name: external-dns
+      repository: https://kubernetes-sigs.github.io/external-dns/
+      version: 1.14.5
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 0.2.0
+    description: A Helm chart for External DNS
+    digest: 97e6dd6262bd3f6f4e656e068506231de1dce02b162b6035f540cc846ea7146d
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: external-dns
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/external-dns-0.1.0/external-dns-0.1.0.tgz
+    version: 0.1.0
+  external-secrets:
+  - apiVersion: v2
+    created: "2025-12-03T23:31:13.087444-05:00"
+    dependencies:
+    - condition: external-secrets.enabled
+      name: external-secrets
+      repository: https://charts.external-secrets.io
+      version: '>=0.10.5'
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: '>=0.1.0'
+    description: A Helm chart with external-secrets as subchart
+    digest: a83121d027db97bc75dd55c62ef056897d15efe5011cbd2576e091b5499a0022
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: external-secrets
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/external-secrets-1.1.1/external-secrets-1.1.1.tgz
+    version: 1.1.1
+  - apiVersion: v2
+    created: "2025-12-03T23:31:12.908567-05:00"
+    dependencies:
+    - condition: external-secrets.enabled
+      name: external-secrets
+      repository: https://charts.external-secrets.io
+      version: '>=0.10.5'
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: '>=0.1.0'
+    description: A Helm chart with external-secrets as subchart
+    digest: c7bdc8488c73bda68c3a7dc1fdf3c3aaeb16e0337f251f0e054b66ab14752f3d
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: external-secrets
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/external-secrets-1.1.0/external-secrets-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
+    created: "2025-12-03T23:31:12.758699-05:00"
+    dependencies:
+    - condition: external-secrets.enabled
+      name: external-secrets
+      repository: https://charts.external-secrets.io
+      version: '>=0.10.5'
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: '>=0.1.0'
+    description: A Helm chart with external-secrets as subchart
+    digest: 62dcd69ee72e96dcf0f7e98c59397f0f89b9dd274ec285426dc9fdb29f4e2024
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: external-secrets
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/external-secrets-1.0.0/external-secrets-1.0.0.tgz
+    version: 1.0.0
+  external-secrets-manager:
+  - apiVersion: v2
+    created: "2025-12-03T23:31:13.632427-05:00"
+    dependencies:
+    - name: common-library
+      repository: https://komailo.github.io/helm-charts
+      version: 0.4.0
+    description: A Helm chart to create external secret objects
+    digest: 01be863093ecc5c998a257bc8941b806e74f01b766a670a7ef6ee770381ae410
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: external-secrets-manager
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/external-secrets-manager-0.3.0/external-secrets-manager-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    created: "2025-12-03T23:31:13.414089-05:00"
+    dependencies:
+    - name: common-library
+      repository: https://komailo.github.io/helm-charts
+      version: 0.3.1
+    description: A Helm chart to create external secret objects
+    digest: 6d7913b11f319984c2d798c2b95845dc3ab55e79a855a42c5dec3432ba20a139
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: external-secrets-manager
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/external-secrets-manager-0.2.1/external-secrets-manager-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
+    created: "2025-12-03T23:31:13.264785-05:00"
+    dependencies:
+    - name: common-library
+      repository: https://komailo.github.io/helm-charts
+      version: 0.3.0
+    description: A Helm chart to create external secret objects
+    digest: eb6dc3b21061831651f8cb7608093fb9c97555428afc4b92cfe2b5869cf6e82e
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: external-secrets-manager
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/external-secrets-manager-0.2.0/external-secrets-manager-0.2.0.tgz
+    version: 0.2.0
+  ingress-nginx:
+  - apiVersion: v2
+    created: "2025-12-03T23:31:14.060533-05:00"
+    dependencies:
+    - alias: ingress-nginx
+      condition: ingress-nginx.enabled
+      name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: '>=4.11.2'
+    description: A Helm chart with ingress-nginx as subchart
+    digest: be5ee0373164d085af1fc264fdda0a7b596e2c8d42eafce8de4e26e7ba7ee4a5
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: ingress-nginx
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/ingress-nginx-1.0.0/ingress-nginx-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    created: "2025-12-03T23:31:13.927226-05:00"
+    dependencies:
+    - alias: ingress-nginx
+      condition: ingress-nginx.enabled
+      name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: '>=4.11.2'
+    description: A Helm chart with ingress-nginx as subchart
+    digest: 3d464b6c42797cf01d7249ba49de0c5ac31ce575cf5fcc30bc7b949faa04c749
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: ingress-nginx
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/ingress-nginx-0.2.0/ingress-nginx-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-12-03T23:31:13.774575-05:00"
+    dependencies:
+    - alias: ingress-nginx
+      condition: ingress-nginx.enabled
+      name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: '>=4.11.2'
+    description: A Helm chart with ingress-nginx as subchart
+    digest: 39878f4c063d28df848aa79be48161c907165f4560a2c1a4cec704f53f2bc398
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: ingress-nginx
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/ingress-nginx-0.1.0/ingress-nginx-0.1.0.tgz
+    version: 0.1.0
+  k8s-metrics-server:
+  - apiVersion: v2
+    created: "2025-12-03T23:31:14.322687-05:00"
+    dependencies:
+    - alias: metrics-server
+      condition: metrics-server.enabled
+      name: metrics-server
+      repository: https://kubernetes-sigs.github.io/metrics-server/
+      version: 3.13.0
+    description: A Helm chart for Kubernetes Metrics Server
+    digest: 3636ad7f8fc7f11797779aa8a5f231ea1ef915378c8c58d5ef948ef105dd6a91
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: k8s-metrics-server
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/k8s-metrics-server-1.1.0/k8s-metrics-server-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
+    created: "2025-12-03T23:31:14.192911-05:00"
+    dependencies:
+    - alias: metrics-server
+      condition: metrics-server.enabled
+      name: metrics-server
+      repository: https://kubernetes-sigs.github.io/metrics-server/
+      version: 3.12.2
+    description: A Helm chart for Kubernetes Metrics Server
+    digest: 354d8a95427ca0902e9f0a8fc0ef32eb0d1f5bab6d6cd7ba59b37ffbe0588bb8
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: k8s-metrics-server
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/k8s-metrics-server-1.0.0/k8s-metrics-server-1.0.0.tgz
+    version: 1.0.0
+  local-path-provisioner:
+  - apiVersion: v2
+    created: "2025-12-03T23:31:15.49882-05:00"
+    dependencies:
+    - alias: local-path-provisioner
+      condition: local-path-provisioner.enabled
+      name: local-path-provisioner
+      repository: file://./deps/local-path-provisioner-src/deploy/chart/local-path-provisioner
+      version: '>=0.0.0'
+    description: A Helm chart with local-path-provisioner as subchart
+    digest: 18f65cf11a78b3bb422b25e0a0a5ce28c217b848cb9140521bb30c19631b88e6
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: local-path-provisioner
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/local-path-provisioner-1.3.0/local-path-provisioner-1.3.0.tgz
+    version: 1.3.0
+  - apiVersion: v2
+    created: "2025-12-03T23:31:15.144969-05:00"
+    dependencies:
+    - alias: local-path-provisioner
+      condition: local-path-provisioner.enabled
+      name: local-path-provisioner
+      repository: file://./deps/local-path-provisioner-src/deploy/chart/local-path-provisioner
+      version: '>=0.0.0'
+    description: A Helm chart with local-path-provisioner as subchart
+    digest: 03a099cf2e7f2458d27dccf3747b7b5ab7e0f0de74498cd2403e14c50976c7b0
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: local-path-provisioner
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/local-path-provisioner-1.1.0/local-path-provisioner-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
+    created: "2025-12-03T23:31:14.753236-05:00"
+    dependencies:
+    - alias: local-path-provisioner
+      name: local-path-provisioner
+      repository: file://./deps/local-path-provisioner-src/deploy/chart/local-path-provisioner
+      version: '>=0.0.0'
+    description: A Helm chart with local-path-provisioner as subchart
+    digest: 0635a63ea398614b750ae3bd54fa7ffaa4a3acadb65d7442e627efa10b72fc29
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: local-path-provisioner
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/local-path-provisioner-1.0.0/local-path-provisioner-1.0.0.tgz
+    version: 1.0.0
+  longhorn:
+  - apiVersion: v2
+    created: "2025-12-03T23:31:16.006865-05:00"
+    dependencies:
+    - alias: longhorn
+      condition: longhorn.enabled
+      name: longhorn
+      repository: https://charts.longhorn.io
+      version: 1.8.1
+    description: A Helm chart with longhorn as subchart
+    digest: d4e6a3ed90285164b61b9e3d3467f83cb3aac8e8a49e6baa43d54bb1aec35a92
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: longhorn
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/longhorn-0.2.1/longhorn-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
+    created: "2025-12-03T23:31:15.815475-05:00"
+    dependencies:
+    - alias: longhorn
+      condition: longhorn.enabled
+      name: longhorn
+      repository: https://charts.longhorn.io
+      version: 1.8.0
+    description: A Helm chart with longhorn as subchart
+    digest: 89181d05a72f676815a88baa1b71361158e6d3e6484c4305b319183cecd1a404
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: longhorn
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/longhorn-0.2.0/longhorn-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-12-03T23:31:15.664233-05:00"
+    dependencies:
+    - alias: longhorn
+      condition: longhorn.enabled
+      name: longhorn
+      repository: https://charts.longhorn.io
+      version: 1.7.1
+    description: A Helm chart with longhorn as subchart
+    digest: 3aea90ebc651a0c8e9b25fa25f0fbbb1f824fed0e2c62a23879d354ea735dbe0
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: longhorn
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/longhorn-0.1.0/longhorn-0.1.0.tgz
+    version: 0.1.0
   metallb:
   - apiVersion: v2
     created: "2025-12-04T04:19:51.177021782Z"
@@ -20,4 +711,165 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/metallb-1.2.1/metallb-1.2.1.tgz
     version: 1.2.1
-generated: "2025-12-04T04:19:51.17703127Z"
+  - apiVersion: v2
+    created: "2025-12-03T23:31:16.452259-05:00"
+    dependencies:
+    - alias: metallb
+      condition: metallb.enabled
+      name: metallb
+      repository: https://metallb.github.io/metallb
+      version: 0.14.8
+    description: A Helm chart with metallb as sub chart and configs
+    digest: 0957db38597c00b7ce8054bec7c44d810940e1d182a1da3c0bbb4db9dba15ecf
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: metallb
+    sources:
+    - https://github.com/komailo/helm-charts
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/metallb-1.0.0/metallb-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    created: "2025-12-03T23:31:16.30644-05:00"
+    dependencies:
+    - alias: metallb
+      condition: metallb.enabled
+      name: metallb
+      repository: https://metallb.github.io/metallb
+      version: 0.14.8
+    description: A Helm chart with metallb as sub chart and configs
+    digest: ac62fb40a96dfcead2efdd1f6f4d20f9bcfd18cb98ad07480b0a0031042765a0
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: metallb
+    sources:
+    - https://github.com/komailo/helm-charts
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/metallb-0.2.0/metallb-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    created: "2025-12-03T23:31:16.150525-05:00"
+    dependencies:
+    - alias: metallb
+      condition: metallb.enabled
+      name: metallb
+      repository: https://metallb.github.io/metallb
+      version: 0.14.8
+    description: A Helm chart with metallb as sub chart and configs
+    digest: 0719d5c5d4155c1b79f91891c445de288dca1e17f66857ff05cb48ebb1a6cd98
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: metallb
+    sources:
+    - https://github.com/komailo/helm-charts
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/metallb-0.1.0/metallb-0.1.0.tgz
+    version: 0.1.0
+  traefik:
+  - apiVersion: v2
+    created: "2025-12-03T23:31:16.999596-05:00"
+    dependencies:
+    - condition: traefik.enabled
+      name: traefik
+      repository: oci://ghcr.io/traefik/helm
+      version: 37.4.0
+    description: A Helm chart with traefik as subchart
+    digest: bc35289f07132bcb5ddda91793b6dcd888a25246a48211652c5ec8a0da943f34
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: traefik
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/traefik-1.1.0/traefik-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
+    created: "2025-12-03T23:31:16.847611-05:00"
+    dependencies:
+    - condition: traefik.enabled
+      name: traefik
+      repository: oci://ghcr.io/traefik/helm
+      version: 37.4.0
+    description: A Helm chart with traefik as subchart
+    digest: ee651e031292e05e89570f2164e667f4ff5bf87e98423a9f159a4d9f9693cea4
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: traefik
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/traefik-1.0.0/traefik-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    created: "2025-12-03T23:31:16.625368-05:00"
+    dependencies:
+    - condition: traefik.enabled
+      name: traefik
+      repository: oci://ghcr.io/traefik/helm
+      version: 37.4.0
+    description: A Helm chart with traefik as subchart
+    digest: 68bf34e2a37567811c2c0e1712d6988e50a628489c28aee1e8c10f85025e0362
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: traefik
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/traefik-0.1.0/traefik-0.1.0.tgz
+    version: 0.1.0
+  whoami:
+  - apiVersion: v2
+    appVersion: 1.10.3
+    created: "2025-12-03T23:31:17.425198-05:00"
+    description: A Helm Chart for whoami
+    digest: b8dc77845982c1a5a75768c36df888228d81a17e3430a46ebb575ff529fd6545
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: whoami
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/whoami-0.3.0/whoami-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.10.2
+    created: "2025-12-03T23:31:17.285081-05:00"
+    description: A Helm Chart for whoami
+    digest: 6a3b7c17add9210e5a75d96e83d61e160b47e4f90d43e65fd19c2c96ef3a8820
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: whoami
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/whoami-0.2.0/whoami-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.10.2
+    created: "2025-12-03T23:31:17.137894-05:00"
+    description: A Helm Chart for whoami
+    digest: cb58db9d786e4b8795b1d0c2ac264e16217394fa2da336d277be0b8c80e1efc0
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: whoami
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-12-03T23:31:17.425414-05:00"
