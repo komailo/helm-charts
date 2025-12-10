@@ -35,5 +35,5 @@ parameters:
   nodePath: "{{ $path }}"
   pathPattern: {{ "\"{{ .PVC.Namespace }}/{{ .PVC.Name }}\"" }}
 volumeBindingMode: WaitForFirstConsumer
-reclaimPolicy: Retain
+reclaimPolicy: Delete
 {{- end }}
