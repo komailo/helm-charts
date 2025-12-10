@@ -765,6 +765,26 @@ entries:
     version: 1.0.0
   local-path-provisioner:
   - apiVersion: v2
+    created: "2025-12-10T20:26:25.83011409Z"
+    dependencies:
+    - alias: local-path-provisioner
+      condition: local-path-provisioner.enabled
+      name: local-path-provisioner
+      repository: file://./deps/local-path-provisioner-src/deploy/chart/local-path-provisioner
+      version: '>=0.0.0'
+    description: A Helm chart with local-path-provisioner as subchart
+    digest: f7e82b827d5b0cb221367a44d4c300a32d15806a2ff5c23b2dd854bba39dd5f8
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: local-path-provisioner
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/local-path-provisioner-1.5.0/local-path-provisioner-1.5.0.tgz
+    version: 1.5.0
+  - apiVersion: v2
     created: "2025-12-07T02:48:28.487420311Z"
     dependencies:
     - alias: local-path-provisioner
@@ -1106,4 +1126,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2025-12-09T18:13:47.377220665Z"
+generated: "2025-12-10T20:26:25.830199741Z"
