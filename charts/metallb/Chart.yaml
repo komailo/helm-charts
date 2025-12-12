@@ -9,7 +9,7 @@ sources:
   - https://github.com/komailo/helm-charts
 dependencies:
   - name: metallb
-    version: "0.15.2"
+    version: "0.15.3"
     repository: https://metallb.github.io/metallb
     alias: metallb
     condition: metallb.enabled
