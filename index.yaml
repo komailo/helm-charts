@@ -787,6 +787,31 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/k8s-metrics-server-1.0.0/k8s-metrics-server-1.0.0.tgz
     version: 1.0.0
+  librechat:
+  - apiVersion: v2
+    created: "2025-12-28T20:38:19.947177028Z"
+    dependencies:
+    - condition: librechat.enabled
+      name: librechat
+      repository: oci://ghcr.io/danny-avila/librechat-chart
+      version: 1.9.4
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 1.0.5
+    description: A Helm chart with librechat as subchart
+    digest: c779d1348502a813ed2e44f0dea552e64fb2d67d92dacc2a5122e7c1b5524f34
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: librechat
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/librechat-1.0.0/librechat-1.0.0.tgz
+    version: 1.0.0
   local-path-provisioner:
   - apiVersion: v2
     created: "2025-12-10T20:26:25.83011409Z"
@@ -1188,4 +1213,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2025-12-28T20:29:44.714190588Z"
+generated: "2025-12-28T20:38:19.947267967Z"
