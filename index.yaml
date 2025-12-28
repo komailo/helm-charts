@@ -1048,6 +1048,25 @@ entries:
     version: 0.1.0
   traefik:
   - apiVersion: v2
+    created: "2025-12-28T20:27:22.463844241Z"
+    dependencies:
+    - condition: traefik.enabled
+      name: traefik
+      repository: oci://ghcr.io/traefik/helm
+      version: 38.0.1
+    description: A Helm chart with traefik as subchart
+    digest: 50904b693814b9e631813d97f61c12f69dfe938491e951c9016c68df3454e0cb
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: traefik
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/traefik-2.0.0/traefik-2.0.0.tgz
+    version: 2.0.0
+  - apiVersion: v2
     created: "2025-12-03T23:31:16.999596-05:00"
     dependencies:
     - condition: traefik.enabled
@@ -1150,4 +1169,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2025-12-19T18:14:13.372855967Z"
+generated: "2025-12-28T20:27:22.46392433Z"
