@@ -838,6 +838,30 @@ entries:
     version: 1.0.0
   librechat:
   - apiVersion: v2
+    created: "2026-01-07T18:28:00.038536456Z"
+    dependencies:
+    - condition: librechat.enabled
+      name: librechat
+      repository: oci://ghcr.io/danny-avila/librechat-chart
+      version: 1.9.5
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 1.0.5
+    description: A Helm chart with librechat as subchart
+    digest: 56da14b233404c89de1931d0adcb4bd0569d171f5c526d6c97e8fc41ca8549f3
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: librechat
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/librechat-1.0.1/librechat-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
     created: "2025-12-28T20:38:19.947177028Z"
     dependencies:
     - condition: librechat.enabled
@@ -1262,4 +1286,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2026-01-03T01:04:47.148987308Z"
+generated: "2026-01-07T18:28:00.038611646Z"
