@@ -108,7 +108,8 @@ spec:
 
 {{- define "external-secret-manager.dotenv.literal" -}}
 {{- $rawKey := "__dotenv" -}}
-{{ printf "{{- $raw := get .Data %q | default \"\" -}}\n" $rawKey }}
+{{ printf "{{- $data := get . %q | default (dict) -}}\n" "Data" }}
+{{ printf "{{- $raw := get $data %q | default \"\" -}}\n" $rawKey }}
 {{ printf "{{- $lines := regexSplit \"\\r?\\n\" $raw -1 -}}\n" }}
 {{ printf "{{- range $line := $lines -}}\n" }}
 {{ printf "{{- $trim := trim $line -}}\n" }}
