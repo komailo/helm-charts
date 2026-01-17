@@ -15,3 +15,15 @@ SimpleSecrets:
     dataSecretKey: mySecret
     remoteRefKey: /my-path/test-secret-2
 ```
+
+## DotEnv Secrets
+
+Use `DotEnvSecrets` when a single AWS SSM parameter stores multiple values in an `.env` style format (`KEY=VALUE` per line). The chart reads the parameter once and splits each line into a separate key in the generated `Secret`.
+
+```yaml
+DotEnvSecrets:
+  - name: app-env
+    remoteRefKey: /env/app
+```
+
+Lines without an `=` or beginning with `#` are skipped. Keys keep their original casing (`foo=BaR` stays `foo`).

@@ -6,3 +6,7 @@ SimpleSecrets:
 SubPathSecrets:
   - name: backup-secrets
     remoteRefKey: /k8s-dev/backup
+
+DotEnvSecrets:
+  - name: app-env
+    remoteRefKey: /k8s/env/app
