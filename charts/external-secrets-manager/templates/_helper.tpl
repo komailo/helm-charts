@@ -113,7 +113,7 @@ spec:
 {{ printf "{{- range $line := $lines -}}\n" }}
 {{ printf "{{- $trim := trim $line -}}\n" }}
 {{ printf "{{- if and $trim (not (hasPrefix $trim \"#\")) -}}\n" }}
-{{ printf "{{- $parts := splitn 2 \"=\" $trim -}}\n" }}
+{{ printf "{{- $parts := splitn \"=\" 2 $trim -}}\n" }}
 {{ printf "{{- if eq (len $parts) 2 -}}\n" }}
 {{ printf "{{- $key := trim (index $parts 0) -}}\n" }}
 {{ printf "{{- $val := trim (index $parts 1) -}}\n" }}
