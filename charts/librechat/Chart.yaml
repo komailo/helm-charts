@@ -2,7 +2,7 @@ apiVersion: v2
 name: librechat
 description: A Helm chart with librechat as subchart
 type: application
-version: 1.1.1
+version: 1.2.0
 
 maintainers:
   - name: komailo
@@ -15,7 +15,7 @@ dependencies:
     repository: oci://ghcr.io/danny-avila/librechat-chart
     condition: librechat.enabled
   - name: external-secrets-manager
-    version: "1.1.1"
+    version: "1.2.0"
     repository: https://komailo.github.io/helm-charts
     condition: external-secrets-manager.enabled
     alias: esm
