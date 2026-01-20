@@ -16,14 +16,22 @@ SimpleSecrets:
     remoteRefKey: /my-path/test-secret-2
 ```
 
-## DotEnv Secrets
+## JSON Secrets
 
-Use `DotEnvSecrets` when a single AWS SSM parameter stores multiple values in an `.env` style format (`KEY=VALUE` per line). The chart reads the parameter once and splits each line into a separate key in the generated `Secret`.
+`JsonSecrets` expects the upstream value to be a JSON object (string) where each entry maps directly to the resulting Kubernetes `Secret` data. This follows the [External Secrets Operator "all keys" guide](https://external-secrets.io/latest/guides/all-keys-one-secret/).
+
+Store the SSM parameter value similar to:
+
+```json
+{"MONGO_INITDB_ROOT_USERNAME":"root","MONGO_INITDB_ROOT_PASSWORD":"example"}
+```
+
+and reference it in the chart:
 
 ```yaml
-DotEnvSecrets:
+JsonSecrets:
   - name: app-env
     remoteRefKey: /env/app
 ```
 
-Lines without an `=` or beginning with `#` are skipped. Keys keep their original casing (`foo=BaR` stays `foo`).
+Every JSON key is copied verbatim into the generated `Secret` and values remain as plain strings.
