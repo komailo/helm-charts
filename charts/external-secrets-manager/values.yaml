@@ -12,8 +12,9 @@ SubPathSecrets:
   # - name: backup-secrets
   #   remoteRefKey: /k8s-dev/backup
 
-DotEnvSecrets:
+JsonSecrets:
   # - name: app-env
   #   remoteRefKey: /k8s/app/envfile
   #   namespace: my-namespace
   #   targetName: app-env
+  #   # remote value must be a JSON object string (keys become Secret data entries)

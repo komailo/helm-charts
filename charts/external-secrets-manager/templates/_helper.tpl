@@ -38,19 +38,11 @@ spec:
             target: "_"
 {{- end -}}
 
-{{- define "external-secret-manager.overide.dotenv" -}}
-{{- $rawKey := "__dotenv" -}}
+{{- define "external-secret-manager.overide.json" -}}
 spec:
-  data:
-    - secretKey: "{{ $rawKey }}"
-      remoteRef:
+  dataFrom:
+    - extract:
         key: "{{ .item.remoteRefKey }}"
-        {{- with .item.remoteRefProperty }}
-        property: "{{ . }}"
-        {{- end }}
-        {{- with .item.remoteRefVersion }}
-        version: "{{ . }}"
-        {{- end }}
         {{- with .item.remoteRefDecodingStrategy }}
         decodingStrategy: "{{ . }}"
         {{- end }}
@@ -60,14 +52,6 @@ spec:
         {{- with .item.remoteRefMetadataPolicy }}
         metadataPolicy: "{{ . }}"
         {{- end }}
-  target:
-    template:
-      engineVersion: v2
-      mergePolicy: Replace
-      templateFrom:
-        - literal: |
-{{ include "external-secret-manager.dotenv.literal" . | indent 12 }}
-          target: Data
 {{- end -}}
 
 {{- define "external-secret-manager.simple" -}}
@@ -94,34 +78,14 @@ spec:
 {{- end -}}
 {{- end -}}
 
-{{- define "external-secret-manager.dotenv" -}}
+{{- define "external-secret-manager.json" -}}
 {{- $Values := .Values }}
 {{- $Release := .Release }}
-{{- range $index, $item := $Values.DotEnvSecrets -}}
+{{- range $index, $item := $Values.JsonSecrets -}}
 {{- $context := dict "item" $item "Values" $Values "Release" $Release -}}
 {{- with $context }}
 ---
-{{ include "common.utils.merge" (list . "external-secret-manager.overide.dotenv" "external-secret-manager.base") }}
+{{ include "common.utils.merge" (list . "external-secret-manager.overide.json" "external-secret-manager.base") }}
 {{- end -}}
 {{- end -}}
-{{- end -}}
-
-{{- define "external-secret-manager.dotenv.literal" -}}
-{{- $rawKey := "__dotenv" -}}
-{{ printf "{{- $data := get . %q | default (dict) -}}\n" "Data" }}
-{{ printf "{{- $raw := get $data %q | default \"\" -}}\n" $rawKey }}
-{{ printf "{{- $lines := regexSplit \"\\r?\\n\" $raw -1 -}}\n" }}
-{{ printf "{{- range $line := $lines -}}\n" }}
-{{ printf "{{- $trim := trim $line -}}\n" }}
-{{ printf "{{- if and $trim (not (hasPrefix $trim \"#\")) -}}\n" }}
-{{ printf "{{- $parts := splitn \"=\" 2 $trim -}}\n" }}
-{{ printf "{{- if eq (len $parts) 2 -}}\n" }}
-{{ printf "{{- $key := trim (index $parts 0) -}}\n" }}
-{{ printf "{{- $val := trim (index $parts 1) -}}\n" }}
-{{ printf "{{- if $key -}}\n" }}
-{{ printf "{{ $key }}: {{ $val | quote }}\n" }}
-{{ printf "{{- end -}}\n" }}
-{{ printf "{{- end -}}\n" }}
-{{ printf "{{- end -}}\n" }}
-{{ printf "{{- end -}}\n" }}
 {{- end -}}
