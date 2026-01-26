@@ -2,7 +2,7 @@ apiVersion: v2
 name: traefik
 description: A Helm chart with traefik as subchart
 type: application
-version: 2.0.1
+version: 3.0.0
 
 maintainers:
   - name: komailo
@@ -11,6 +11,6 @@ sources:
   - https://github.com/komailo/helm-charts
 dependencies:
   - name: traefik
-    version: "38.0.2"
+    version: "39.0.0"
     repository: oci://ghcr.io/traefik/helm
     condition: traefik.enabled
