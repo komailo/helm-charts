@@ -1,0 +1,4 @@
+cloudflare-tunnel-remote:
+  image:
+    repository: cloudflare/cloudflared
+    tag: 2026.1.2
