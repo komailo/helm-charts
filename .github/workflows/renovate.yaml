@@ -24,7 +24,7 @@ jobs:
           submodules: true
 
       - name: Self-hosted Renovate
-        uses: renovatebot/github-action@e23f4d9675532445118c886434f5a34292b630b4 # v46.0.2
+        uses: renovatebot/github-action@3633cede7d4d4598438e654eac4a695e46004420 # v46.1.7
         with:
           configurationFile: .github/configs/renovate.js
           renovate-version: 38.141.1
