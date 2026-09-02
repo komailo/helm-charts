@@ -9,11 +9,11 @@ jobs:
   artifacthub-lint:
     runs-on: ubuntu-24.04
     container:
-      image: artifacthub/ah@sha256:ffdb21cf1bbcea79c10a5f702eace08f841ff635e96c849594c338a048652b6b
+      image: artifacthub/ah@sha256:e5d2a2cdef85aac4928e8176ffaad24746c5fe961d64ff6856f7222957095356
       options: --user root
     steps:
       - name: Checkout code
-        uses: actions/checkout@master
+        uses: actions/checkout@61b9e3751b92087fd0b06925ba6dd6314e06f089 # master
         with:
           submodules: true
       - name: Run ah lint
@@ -35,7 +35,7 @@ jobs:
         with:
           version: v3.16.2
 
-      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: "3.x"
           check-latest: true
