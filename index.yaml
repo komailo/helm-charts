@@ -1737,6 +1737,25 @@ entries:
     version: 0.1.0
   metallb:
   - apiVersion: v2
+    created: "2026-09-02T01:55:35.962446421Z"
+    dependencies:
+    - alias: metallb
+      condition: metallb.enabled
+      name: metallb
+      repository: https://metallb.github.io/metallb
+      version: 0.16.1
+    description: A Helm chart with metallb as sub chart and configs
+    digest: e17f38ec4d9eede05ec4cc04071b705271da8dae27c99524568300ad5da91fb7
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: metallb
+    sources:
+    - https://github.com/komailo/helm-charts
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/metallb-1.2.4/metallb-1.2.4.tgz
+    version: 1.2.4
+  - apiVersion: v2
     created: "2025-12-28T20:29:44.714091985Z"
     dependencies:
     - alias: metallb
@@ -2144,4 +2163,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2026-09-01T23:13:24.402168191Z"
+generated: "2026-09-02T01:55:35.96263079Z"
