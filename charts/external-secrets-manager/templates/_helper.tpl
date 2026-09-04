@@ -12,6 +12,10 @@ spec:
   target:
     name: "{{ .item.targetName | default .item.name }}"
     creationPolicy: Owner
+{{ with .item.type }}
+    template:
+      type: {{ . | quote }}
+{{ end }}
 {{- end -}}
 
 {{- define "external-secret-manager.overide.simple" -}}
