@@ -2,6 +2,10 @@ SimpleSecrets:
   - name: dns-token
     dataSecretKey: token
     remoteRefKey: /blah/external-dns/dns-token
+  - name: ghcr-pull-secret
+    dataSecretKey: .dockerconfigjson
+    remoteRefKey: /k8s-prod/pull-secrets/ghcr
+    type: kubernetes.io/dockerconfigjson
 
 SubPathSecrets:
   - name: backup-secrets
