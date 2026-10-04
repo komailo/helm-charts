@@ -7,7 +7,7 @@ permissions:
 jobs:
   ## Reference: https://artifacthub.io/docs/topics/cli/
   artifacthub-lint:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     container:
       image: artifacthub/ah@sha256:e5d2a2cdef85aac4928e8176ffaad24746c5fe961d64ff6856f7222957095356
       options: --user root
