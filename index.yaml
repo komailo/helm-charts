@@ -192,6 +192,31 @@ entries:
     version: 1.0.0
   cert-manager:
   - apiVersion: v2
+    created: "2026-10-25T02:26:27.981350443Z"
+    dependencies:
+    - alias: cert-manager
+      condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.21.3
+    - alias: esm
+      condition: external-secrets-manager.enabled
+      name: external-secrets-manager
+      repository: https://komailo.github.io/helm-charts
+      version: 1.3.0
+    description: A Helm chart with cert-manager as subchart
+    digest: c0e35e1272de19b92c16bc2f9125ac2a2dfe04270e07ffa8006fcf9672ed705a
+    maintainers:
+    - name: komailo
+      url: https://github.com/komailo/helm-charts
+    name: cert-manager
+    sources:
+    - https://github.com/komailo/helm-charts
+    type: application
+    urls:
+    - https://github.com/komailo/helm-charts/releases/download/cert-manager-1.10.2/cert-manager-1.10.2.tgz
+    version: 1.10.2
+  - apiVersion: v2
     created: "2026-09-11T22:03:05.173995063Z"
     dependencies:
     - alias: cert-manager
@@ -2572,4 +2597,4 @@ entries:
     urls:
     - https://github.com/komailo/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
     version: 0.1.0
-generated: "2026-10-04T01:06:59.625819956Z"
+generated: "2026-10-25T02:26:27.98155741Z"
